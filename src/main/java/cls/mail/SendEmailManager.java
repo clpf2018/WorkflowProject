@@ -1,6 +1,5 @@
 package cls.mail;
 import java.util.Properties;
-
 import javax.mail.Message;
 import javax.mail.MessagingException;
 import javax.mail.PasswordAuthentication;
@@ -17,7 +16,8 @@ public class SendEmailManager {
 	//	<artifactId>javax.mail</artifactId>
 //		<version>1.5.5</version>
 //	</dependency>
-	      // Sender's email ID needs to be mentioned
+	    
+		
 	      String emailFrom = emailConfig.emailFrom;
 	       String username = emailConfig.userName;
 	       String password =emailConfig.password;
