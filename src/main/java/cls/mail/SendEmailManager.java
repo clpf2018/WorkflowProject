@@ -73,18 +73,18 @@ public class SendEmailManager {
 	}
 	class EmailWrapper
 	{
-		public String EmailTo ;
-		public String EmailSubject ;
-		public String EmailBody;	
+		public final String EmailTo ;
+		public final String EmailSubject ;
+		public final String EmailBody;	
 	}
 	class EmailConfiguration
 	{
-		public String host ;
-		public String port ;
-		public Boolean isAuthEnable ;
-		public String emailFrom ;
-		public String userName ;
-		public String password ;
+		public final String host ;
+		public final String port ;
+		public final Boolean isAuthEnable ;
+		public final String emailFrom ;
+		public final String userName ;
+		public final String password ;
 			
 	}
 }
