@@ -17,7 +17,7 @@ public class SendEmailManager {
 //		<version>1.5.5</version>
 //	</dependency>
 	    
-		
+		/*
 	      String emailFrom = emailConfig.emailFrom;
 	       String username = emailConfig.userName;
 	       String password =emailConfig.password;
@@ -70,6 +70,7 @@ public class SendEmailManager {
 	            throw new RuntimeException(e);
 	      }
 	      }
+		  */
 	}
 	class EmailWrapper
 	{
