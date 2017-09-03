@@ -9,7 +9,7 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
 public class SendEmailManager {
-	public static void sendMailWithoutAttachement(EmailConfiguration emailConfig, EmailWrapper[] emailsTo) 
+	public static void sendMailWithoutAttachement() 
 	{	 
 		//<dependency>
 	//	<groupId>com.sun.mail</groupId>
@@ -72,20 +72,5 @@ public class SendEmailManager {
 	      }
 		  */
 	}
-	class EmailWrapper
-	{
-		public final String EmailTo ;
-		public final String EmailSubject ;
-		public final String EmailBody;	
-	}
-	class EmailConfiguration
-	{
-		public final String host ;
-		public final String port ;
-		public final Boolean isAuthEnable ;
-		public final String emailFrom ;
-		public final String userName ;
-		public final String password ;
-			
-	}
+
 }
