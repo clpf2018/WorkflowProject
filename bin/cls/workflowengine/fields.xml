@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fields> 
+<field>
+<order>1</order>
+<name>DKEY</name>
+<sqlType>NUMBER</sqlType>
+<sqlSize>10</sqlSize>
+<sqlPK>checked</sqlPK>
+<desc>dKey</desc>
+<type>Numeric</type>
+<min>1</min>
+<min_sort_order></min_sort_order>
+<formType>TextBox</formType>
+<size>15</size>
+<mandatory>unchecked</mandatory>
+<insert>unchecked</insert>
+<update>unchecked</update>
+<show>checked</show>
+<unicity>unchecked</unicity>
+</field>
+</fields>
