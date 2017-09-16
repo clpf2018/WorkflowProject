@@ -16,7 +16,7 @@ public class dbTablesObjectManager {
 	public static Hashtable<String, List<field>>   getTablesSchema(String dbName,String tableNames )
 	{
 		Hashtable<String, List<field>> retVal= new Hashtable<String, List<field>>();
-		ResultSet rs=mySqlDbManager.getInstance().SelectStatement("select column_name,ordinal_position,is_nullable,data_type,character_maximum_length,udt_name,table_name from INFORMATION_SCHEMA.COLUMNS where table_catalog='"+dbName+"' and table_name in('"+tableNames+"')");
+		ResultSet rs=DatabaseBuilder.getInstance().getDatabase("sysDb").SelectStatement("select column_name,ordinal_position,is_nullable,data_type,character_maximum_length,udt_name,table_name from INFORMATION_SCHEMA.COLUMNS where table_catalog='"+dbName+"' and table_name in('"+tableNames+"')");
 		try 
 		{
 			while (rs.next()) 
