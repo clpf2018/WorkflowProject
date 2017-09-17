@@ -1,8 +1,4 @@
 package cls.db;
-import java.beans.XMLEncoder;
-import java.io.BufferedOutputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -11,8 +7,27 @@ import java.util.List;
 import cls.db.field;
 
 public class dbTablesObjectManager {
-// the table names string should be in this format table1','table2','table3
-	// in case we have only one table it will be only table1
+	
+	public static Hashtable<String, String>   getTablesOfSchema(String dbName )
+	{
+		Hashtable<String, String>   retVal= new Hashtable<String, String>  ();
+		ResultSet rstablesDatabase=DatabaseBuilder.getInstance().getDatabase(dbName).SelectStatement("SELECT table_schema,table_name,table_type FROM information_schema.tables where table_schema not in  ('information_schema','pg_catalog')");
+		
+		try {
+			while (rstablesDatabase.next()) 
+			{
+				retVal.put(rstablesDatabase.getString("table_name"),rstablesDatabase.getString("table_schema"));
+//			field fieldObject=	prepareXmlFormat(,rs.getString("udt_name"),rs.getString("character_maximum_length"),rs.getString("ordinal_position"));
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}	
+		return retVal;
+	}
+	// the table names string should be in this format table1','table2','table3
+		// in case we have only one table it will be only table1
+	
 	public static Hashtable<String, List<field>>   getTablesSchema(String dbName,String tableNames )
 	{
 		Hashtable<String, List<field>> retVal= new Hashtable<String, List<field>>();

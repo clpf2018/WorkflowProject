@@ -9,7 +9,6 @@ import java.net.URISyntaxException;
 public class mySqlDbManager implements IDBManager {
 	    private DataSource dataSource;
 	    private Statement statement;
-        private static mySqlDbManager mySqlDbMan;
         public String getName()
 	    {
 	    	return "postgresql";

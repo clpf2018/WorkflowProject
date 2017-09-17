@@ -16,6 +16,18 @@ public class DatabaseBuilder {
         }
         return retVal;
    }
+    public Hashtable<String,IDBManager> getAllDatabases()
+    {
+        return hashDatabaseInstance;
+    }
+   
+	 public void doReloadDatabases()
+	 {
+	   instance= null;
+	   DatabaseBuilder.getInstance();
+	 }
+   
+	 
     public static DatabaseBuilder getInstance()
     {
        if(instance == null)
